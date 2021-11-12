@@ -1,3 +1,10 @@
-node_modules/*
-.vscode/*
-Smiley Music/*
+# General
+logfile_spotify_scraper.log
+
+# Development tools
+node_modules/
+.vscode/
+
+# Smiley
+Smiley Music/
+Smiley/src/json/
