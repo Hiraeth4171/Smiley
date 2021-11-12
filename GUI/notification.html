@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="notification">
+        <h1 id="title"></h1>
+        <p id=content></p>
+    </div>
+    <script>
+        let { ipcRenderer } = require("electron")
+        let args = ipcRenderer.sendSync('notification', 'gimme');
+        document.getElementById("title").innerHTML = args[1];
+        document.getElementById("content").innerHTML = args[2];
+        ipcRenderer.sendSync('notification', 'close');
+
+    </script>
+</body>
+
+</html>

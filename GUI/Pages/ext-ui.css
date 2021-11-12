@@ -1,0 +1,57 @@
+/* .test-btn {
+} */
+:root {
+    --ball-after-scale: 4;
+    --ball-before-scale: 5;
+}
+
+.test-ctr {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+/* body {
+    overflow: hidden;
+} */
+
+/*body::before,*/ .at-body-before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    filter: blur(40px);
+    position: absolute;
+    background: linear-gradient(180deg,#458eb1, #7e2ea3);
+    clip-path: circle(calc(var(--ball-before-scale) * 10%) at left 10%);
+    -webkit-filter: blur(40px);
+}
+
+/*body::after,*/ .at-body-after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    filter: blur(40px);
+    z-index: -10;
+    position: absolute;
+    background: linear-gradient(0deg,#458eb1, #7e2ea3);
+    clip-path: circle(calc(var(--ball-after-scale) * 10%) at right 70%);
+    -webkit-filter: blur(40px);
+}
+
+.main-ctr {
+    flex-direction: column;
+    height: 80vh;
+    width: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px 30px;
+    transform: translate(-50%,-50%);
+    justify-content: space-evenly;
+    border: 3px white solid;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+}
