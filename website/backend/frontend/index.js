@@ -41,7 +41,7 @@ class Particle {
 
 function setup() {
     let canvas = createCanvas(w, h / 2 + 30);
-    canvas.parent("greg-section");
+    canvas.parent("elia-section");
     for (let i = 0; i < particleCount; i++) {
         particles[i] = new Particle();
     }
