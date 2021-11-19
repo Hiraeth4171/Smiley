@@ -1,5 +1,4 @@
-let { ipcRenderer } = require("electron")
-let Person = require("./Person");
+const { ipcRenderer } = require("electron");
 
-// front-end thing
-let elia = new Person
+let jsonData = ipcRenderer.sendSync("get-schedule-data", "./Pages/schedule/data/events.json");
+console.log(jsonData);
