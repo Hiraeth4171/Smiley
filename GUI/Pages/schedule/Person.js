@@ -12,3 +12,5 @@ class Person {
         fs.writeFileSync("./data", JSON.stringify(this), 'utf8');
     }
 }
+
+module.exports = Person;
