@@ -27,10 +27,10 @@ client.on("ready", () => {
 })
 
 client.on("messageCreate", msg => {
-    if((msg.author.bot == true && msg.author.id != "286756561848762378y") || msg.content == "" || !msg.content.startsWith(config.prefix)) return;
-    args = msg.content.slice(config.prefix.length).split(" ");
+    if((msg.author.bot == true && msg.author.id != "286756561848762378") || msg.content == "" || !msg.content.startsWith(config.prefix)) return;
+    let args = msg.content.slice(config.prefix.length).split(" ");
     console.log(args);
-    if(msg.author.id !=286756561848762378 && client.commands.get(args[0]).info.permission == "Private") return;
+    if(msg.author.id != "286756561848762378" && client.commands.get(args[0]).info.permission == "Private") return;
     client.commands.get(args[0]).run(client, msg, args.slice(1))
 })
 

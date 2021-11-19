@@ -1,4 +1,6 @@
-const { app, BrowserWindow, globalShortcut, Menu, ipcMain } = require('electron');
+const { app, BrowserWindow, globalShortcut, ipcMain } = require('electron');
+const { fstat } = require('original-fs');
+const fs = require('fs');
 /**
  *  @type {BrowserWindow}
  */
@@ -33,6 +35,11 @@ function createWindow() {
 ipcMain.on('close', (event) => {
     console.log("brrr");
     win.close();
+})
+
+ipcMain.on('get-schedule-data', (event, args) => {
+    console.log(args);
+    event.returnValue = fs.readFileSync('./Pages/schedule/data/events.json', "utf8");
 })
 
 ipcMain.on('min', (event) => {
