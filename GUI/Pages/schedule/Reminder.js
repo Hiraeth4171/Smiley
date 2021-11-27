@@ -1,6 +1,8 @@
 class Reminder extends Base {
-    constructor(title, time, category, description, publicity, settings, people){
-        super(title,time,category,description, publicity);
+    constructor(options, settings, people) {
+        super({ id: options.id, title: options.title, time: options.time, category: options.category, description: options.description, publicity: options.publicity });
+        this.settings = settings;
+        this.people = people;
     }
 }
 
