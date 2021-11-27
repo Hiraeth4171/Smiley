@@ -7,10 +7,6 @@ class Person {
         this.bio = bio;
         this.website = website;     
     }
-
-    save() {
-        fs.writeFileSync("./data", JSON.stringify(this), 'utf8');
-    }
 }
 
 module.exports = Person;
