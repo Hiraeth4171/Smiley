@@ -1,4 +1,10 @@
 const { ipcRenderer } = require("electron");
 
-let jsonData = ipcRenderer.sendSync("get-schedule-data", "./Pages/schedule/data/events.json");
-console.log(jsonData);
+let events = ipcRenderer.sendSync("get-schedule-data", "events");
+loadEvents = () => {
+    for (let i = 0; i < events.length; i++) {
+        events[i] = Event.createJsonEvent(events[i]);
+    }
+    console.log(events);
+}
+loadEvents()

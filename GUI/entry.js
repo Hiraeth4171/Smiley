@@ -1,6 +1,7 @@
 const { app, BrowserWindow, globalShortcut, ipcMain } = require('electron');
 const { fstat } = require('original-fs');
 const fs = require('fs');
+let events = require("./Pages/schedule/data/events.json");
 /**
  *  @type {BrowserWindow}
  */
@@ -38,8 +39,7 @@ ipcMain.on('close', (event) => {
 })
 
 ipcMain.on('get-schedule-data', (event, args) => {
-    console.log(args);
-    event.returnValue = fs.readFileSync('./Pages/schedule/data/events.json', "utf8");
+    event.returnValue = events;
 })
 
 ipcMain.on('min', (event) => {
