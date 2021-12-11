@@ -1,10 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400&family=Poppins:wght@100;200;300;500&family=Readex+Pro:wght@200;400&display=swap');
+
 :root {
+    /* colors */
     --background-color: #b6b6b6;
     --alternativebgc: #06090c73;
     --alternativebgcnoa: #dbdbdb;
-    --trans: 1;
     --highlight-text-color: #222222;
     --lower-text-color: #282828;
+
+    --foreground-color: #0e141a;
+    --foreground-text-color: #bdbdbd;
+    /* fonts */
+    --font-poppins: 'Poppins', sans-serif;
+    --font-nunito: 'Nunito', sans-serif;
+    --font-readex: 'Readex Pro', sans-serif;
+    /* transition ig idr */
+    --trans: 1;
 }
 
 * {
@@ -101,9 +112,11 @@ body {
     height: 30vh;
     grid-area: 1;
 }
+
 .menu-container {
     grid-area: 2;
 }
+
 .username {
     color: #c7c7c7f7;
     text-shadow: 0px 0px 5px #ffffff, 1px 1px 5px rgb(0, 0, 0);
@@ -415,6 +428,14 @@ i {
 
 .presentation-list > a {
     text-decoration: none;
+}
+
+.vertical-ctr {
+    width: 100vw;
+    height: calc(100vh - 20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*    THIS IS FOR ADDING A LESS DISTINCT BLUR AT THE BACK WHEN HOVERING
