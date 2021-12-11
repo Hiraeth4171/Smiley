@@ -297,9 +297,18 @@ i {
     color: #747373;
 }
 
+.logo > img {
+    width: 20px;
+    margin-left: 3px;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
 .logo {
-    width: 50px;
-    color: #616161
+    display: flex;
 }
 
 .window-control > i {

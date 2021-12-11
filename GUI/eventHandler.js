@@ -11,7 +11,7 @@ switch (args[0]) {
     case "request":
         front.Request(args);
         break;
-    
+        
     default:
         break;
 }

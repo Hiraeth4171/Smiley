@@ -34,7 +34,6 @@ function createWindow() {
 }
 
 ipcMain.on('close', (event) => {
-    console.log("brrr");
     win.close();
 })
 
@@ -42,13 +41,15 @@ ipcMain.on('get-schedule-data', (event, args) => {
     event.returnValue = events;
 })
 
+// ipcMain.on('schedule-view', (event) => {
+    
+// })
+
 ipcMain.on('min', (event) => {
-    console.log("brrr");
     win.minimize();
 })
 
 ipcMain.on('max', (event) => {
-    console.log("brrr");
     win.maximize();
 })
 

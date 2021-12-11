@@ -8,3 +8,7 @@ loadEvents = () => {
     console.log(events);
 }
 loadEvents()
+
+// document.getElementById('view').onclick = (e) => {
+//     // ipcRenderer.sendSync("schedule-view")
+// }
