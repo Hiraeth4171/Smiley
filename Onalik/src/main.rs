@@ -14,7 +14,7 @@ struct S_Process {
 }
 
 fn main() {
-
+    // ONALIK
 }
 
 // let result = sb::Exec::shell("echo hi").join();
